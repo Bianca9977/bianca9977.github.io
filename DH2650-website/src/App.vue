@@ -2,6 +2,8 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from '@/components/HelloWorld.vue'
 import Homepage from '@/components/Homepage.vue'
+import GameStory from '@/components/GameStory.vue'
+import NavBar from '@/components/NavBar.vue'
 </script>
 
 <template>
@@ -20,7 +22,9 @@ import Homepage from '@/components/Homepage.vue'
 
   <RouterView /> -->
   <div>
+    <NavBar />
     <homepage />
+    <GameStory />
   </div>
 </template>
 
