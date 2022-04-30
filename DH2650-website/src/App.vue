@@ -4,6 +4,8 @@ import HelloWorld from '@/components/HelloWorld.vue'
 import Homepage from '@/components/Homepage.vue'
 import GameStory from '@/components/GameStory.vue'
 import NavBar from '@/components/NavBar.vue'
+import Features from '@/components/Features.vue'
+import Contact from '@/components/Contact.vue'
 </script>
 
 <template>
@@ -22,9 +24,11 @@ import NavBar from '@/components/NavBar.vue'
 
   <RouterView /> -->
   <div>
-    <NavBar />
+    <!-- <NavBar /> -->
     <homepage />
     <GameStory />
+    <Features />
+    <Contact />
   </div>
 </template>
 

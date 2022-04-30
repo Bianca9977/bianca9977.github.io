@@ -1,0 +1,39 @@
+<script setup>
+
+</script>
+
+<template>
+    <div class = "contact">
+        <h3>
+            The Team
+        </h3>
+        <p>
+            Bianca Budulacu
+            budulacu@kth.se
+        </p>
+        <p>
+            August Danell
+            aughak@kth.se
+        </p>
+        <p>
+            Andreas Wrife
+            awrife@kth.se
+        </p>
+        <p>
+            Max Wippich
+            wippich@kth.se
+        </p>
+        <p>
+            Laura Yang
+            laura@yang.ca
+        </p>
+    </div>
+</template>
+
+<style scoped>
+
+    h3 {
+    font-size: 1.2rem;
+    }
+
+</style>
