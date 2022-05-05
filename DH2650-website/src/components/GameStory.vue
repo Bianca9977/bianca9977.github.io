@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
     <div class = "gamestory">
         <h3>
@@ -14,10 +10,11 @@
     </div>
 </template>
 
-<style scoped>
+<script setup>
 
-    h3 {
-    font-size: 1.2rem;
-    }
+</script>
+
+
+<style scoped>
 
 </style>

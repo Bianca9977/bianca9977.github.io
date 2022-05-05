@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
     <div class = "contact">
         <h3>
@@ -30,10 +26,11 @@
     </div>
 </template>
 
-<style scoped>
+<script setup>
 
-    h3 {
-    font-size: 1.2rem;
-    }
+</script>
+
+
+<style lang="scss" scoped>
 
 </style>

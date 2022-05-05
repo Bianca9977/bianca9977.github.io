@@ -1,13 +1,22 @@
 <template>
-  <div class="greetings">
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
+  <div class="container">
+    <NavBar/>
+    <GameStory/>
+    <Features/>
+    <Contact/>
   </div>
 </template>
 
 <script setup>
+import GameStory from '../components/GameStory.vue';
+import Features from '../components/Features.vue';
+import Contact from '../components/Contact.vue';
+import NavBar from '../components/NavBar.vue';
 
+export default {
+  name: "Homepage",
+  components: {GameStory, Features, Contact, NavBar},
+}
 </script>
 
 <style scoped>

@@ -5,11 +5,13 @@ export default {
 </script>
 
 <template>
-    <v-toolbar app color="blue" dark>
+ <!--    <v-toolbar app color="blue" dark>
         <v-toolbar-side-icon></v-toolbar-side-icon>
         <v-toolbar-title>{{appTitle}}</v-toolbar-title>
         <v-btn flat>Menu</v-btn>
-    </v-toolbar>
+    </v-toolbar> -->
+    <div>
+    </div>
 </template>
 
 <style scoped>
