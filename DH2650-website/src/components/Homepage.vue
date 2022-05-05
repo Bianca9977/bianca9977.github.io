@@ -1,8 +1,9 @@
 <template>
-  <div class="container">
+  <div class="web_container">
     <NavBar/>
     <GameStory/>
     <Features/>
+    <EasterEggs/>
     <Contact/>
   </div>
 </template>
@@ -10,12 +11,13 @@
 <script setup>
 import GameStory from '../components/GameStory.vue';
 import Features from '../components/Features.vue';
+import EasterEggs from '../components/EasterEggs.vue';
 import Contact from '../components/Contact.vue';
 import NavBar from '../components/NavBar.vue';
 
 export default {
   name: "Homepage",
-  components: {GameStory, Features, Contact, NavBar},
+  components: {GameStory, Features, EasterEggs, Contact, NavBar},
 }
 </script>
 

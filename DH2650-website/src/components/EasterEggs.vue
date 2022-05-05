@@ -1,8 +1,8 @@
 <template>
-    <div class = "features">
+    <div class = "easter-eggs">
         <div class="container mx-auto p-5">
             <h3>
-                Features
+                Easter Eggs
             </h3>
             <p>
                 Feature 1
