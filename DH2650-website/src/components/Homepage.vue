@@ -1,6 +1,7 @@
 <template>
   <div class="web_container">
     <NavBar/>
+    <VideoTrailer/>
     <GameStory/>
     <Features/>
     <EasterEggs/>
@@ -9,6 +10,7 @@
 </template>
 
 <script setup>
+import VideoTrailer from '../components/VideoTrailer.vue';
 import GameStory from '../components/GameStory.vue';
 import Features from '../components/Features.vue';
 import EasterEggs from '../components/EasterEggs.vue';
@@ -17,7 +19,7 @@ import NavBar from '../components/NavBar.vue';
 
 export default {
   name: "Homepage",
-  components: {GameStory, Features, EasterEggs, Contact, NavBar},
+  components: {VideoTrailer, GameStory, Features, EasterEggs, Contact, NavBar},
 }
 </script>
 
