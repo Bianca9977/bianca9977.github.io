@@ -7,8 +7,11 @@
 .easter-eggs,
 .features,
 .contact {
-    width: 100%;
-    height: 100vh;
+
+    @media (min-width: 1280px) {
+        width: 100%;
+        height: 100vh;
+    }
 }
 
 h3 {
@@ -26,6 +29,23 @@ h3 {
 
 .features {
 
+    .features-container {
+        gap: 20px;
+    }
+
+    .feature {
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color_dark_blue;
+        color: white;
+
+        &.feature-hover {
+            background-color: $color_orange;
+            color: $color_dark_blue;
+        }
+    }
 }
 
 .easter-eggs {
