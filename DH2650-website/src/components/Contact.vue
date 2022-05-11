@@ -1,5 +1,5 @@
 <template>
-    <div class = "contact">
+    <section id="contact" class = "contact">
         <div class="container mx-auto p-5">
             <h3>
                 The Team
@@ -25,7 +25,7 @@
                 laura@yang.ca
             </p>
         </div>
-    </div>
+    </section>
 </template>
 
 <script setup>

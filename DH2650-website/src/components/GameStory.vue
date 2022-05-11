@@ -1,5 +1,5 @@
 <template>
-    <div class = "gamestory">
+    <section id="gamestory" class = "gamestory">
         <div class="container mx-auto p-5">
             <h3>
                 Game Story
@@ -9,7 +9,7 @@
                 where you can explore hidden secrets, build a base, defeat enemies and survive and escape the island. Welcome to Curse of Hau. 
             </p>
         </div>
-    </div>
+    </section>
 </template>
 
 <script setup>

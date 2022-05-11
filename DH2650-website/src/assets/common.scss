@@ -7,6 +7,7 @@
 .easter-eggs,
 .features,
 .contact {
+    min-height: 100vh;
 
     @media (min-width: 1280px) {
         width: 100%;
@@ -62,4 +63,10 @@ h3 {
     p, h3 {
         color: white;
     }
+}
+
+/*VIDEO TRAILER */
+iframe {
+    width: 100%;
+    height: calc(100vh - 20px);
 }

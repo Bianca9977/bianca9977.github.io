@@ -1,5 +1,5 @@
 <template>
-    <div class = "easter-eggs">
+    <section id="easter-eggs" class = "easter-eggs">
         <div class="container mx-auto p-5">
             <h3>
                 Easter Eggs
@@ -13,7 +13,7 @@
                 Feature 6
             </p>
         </div>
-    </div>
+    </section>
 </template>
 
 <script setup>
