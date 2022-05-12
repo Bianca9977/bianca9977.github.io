@@ -23,23 +23,23 @@
 
                 <!-- MOBILE NAV -->
                 <div class="md:hidden">
-                    <button @click="isMobileMenuVisible = true">
+                    <button class="ml-4" @click="isMobileMenuVisible = true">
                         Navbar
                     </button>
                 </div>
                 <div v-if="isMobileMenuVisible" class="mobile-menu">
                     <button @click="closeMenu" class="btnClose">&times;</button>
-                        <ul class="flex flex-col mt-4 md:hidden">
-                        <li>
+                        <ul class="flex flex-col mt-16 md:hidden">
+                        <li class="text-4xl mb-6">
                             <button id="nav-gamestory" @click="scrollToSection('gamestory'); closeMenu()">Game Story</button>
                         </li>
-                        <li>
+                        <li class="text-4xl mb-6">
                             <button id="nav-features" @click="scrollToSection('features'); closeMenu()">Features</button>
                         </li>
-                        <li>
+                        <li class="text-4xl mb-6">
                             <button id="nav-easter-eggs" @click="scrollToSection('easter-eggs'); closeMenu()">Easter eggs</button>
                         </li>
-                        <li>
+                        <li class="text-4xl mb-6">
                             <button id="nav-contact" @click="scrollToSection('contact'); closeMenu()">Contact</button>
                         </li> 
                     </ul>
@@ -125,6 +125,12 @@ nav {
     button {
         &:hover {
             color: #F17F29;
+        }
+
+        &.btnClose {
+            font-size: 50px;
+            position: absolute;
+            right: 30px;
         }
     }
 

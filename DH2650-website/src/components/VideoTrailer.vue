@@ -5,7 +5,7 @@
         <div id="player"></div>
         <div class="skip-button">
             <button @click="skipVideo" id="skipButton">
-                skip video
+                SKIP VIDEO
             </button>
         </div>
     </section>

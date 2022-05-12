@@ -6,6 +6,9 @@
     <Features/>
     <EasterEggs/>
     <Contact/>
+    <div v-if="showTopBtn" @click="goToTop" class="backToTopBtn">
+      <button>TOP</button>
+    </div>
   </div>
 </template>
 
@@ -24,15 +27,36 @@ export default {
   data() {
       return {
         skippedVideo: false,
+        showTopBtn: false,
       }
   },
 
   mounted: function() {
+    var self = this;
+
     bus.$on('skipVideo', function() {
     
       this.skippedVideo = true;
         document.getElementById('webContainer').classList.add('show-content');
-    })
+    });
+
+    document.addEventListener('scroll', function(e) {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        self.showTopBtn = true;
+      }
+      else {
+        self.showTopBtn = false;
+      }
+    });
+  },
+
+  methods: {
+    goToTop: function() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
   }
 }
 </script>
