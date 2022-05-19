@@ -15,7 +15,14 @@
     }
 }
 
+.transition {
+    min-height: 100vh;
+    background-color: black;
+}
+
 .web_container {
+    background-color: black;
+
     .backToTopBtn {
         position: fixed;
         bottom: 50px;
@@ -80,7 +87,55 @@ h3 {
     }
 }
 
+.slide-in-animation {
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+      top: 50vh;
+    }
+  
+    to {
+      top: 0;
+    }
+}
+
+.show-animation {
+    animation-duration: 2s;
+    animation-name: show;
+}
+
+@keyframes show {
+    from {
+      display: none;
+    }
+  
+    to {
+      display: block;
+    }
+}
+
+
+.increaseOpacity-transition {
+    animation-duration: 1s;
+    animation-name: opacity-up;
+}
+
+@keyframes opacity-up {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.5;
+  }
+}
+
+
 .features {
+    background-color: white;
 
     .features-container {
         gap: 20px;
