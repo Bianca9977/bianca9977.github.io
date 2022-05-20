@@ -4,7 +4,7 @@
     <NavBar/> 
     <GameStory/>
     <Features/>
-    <EasterEggs/>
+    <Screenshots/>
     <Contact/>
     <Transition />
     <div v-if="showTopBtn" @click="goToTop" class="backToTopBtn">
@@ -17,6 +17,7 @@
 import VideoTrailer from '../components/VideoTrailer.vue';
 import GameStory from '../components/GameStory.vue';
 import Features from '../components/Features.vue';
+import Screenshots from '../components/Screenshots.vue';
 import EasterEggs from '../components/EasterEggs.vue';
 import Contact from '../components/Contact.vue';
 import NavBar from '../components/NavBar.vue';
@@ -25,7 +26,7 @@ import { bus } from '../main';
 
 export default {
   name: "Homepage",
-  components: {VideoTrailer, GameStory, Features, EasterEggs, Contact, NavBar, Transition},
+  components: {VideoTrailer, GameStory, Features, Screenshots, Contact, NavBar, Transition},
   data() {
       return {
         skippedVideo: false,
