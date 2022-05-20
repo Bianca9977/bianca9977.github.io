@@ -5,8 +5,9 @@
                 The Team
             </h3>
             <div class="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-5 mt-16">
-                <div v-for="(feature, index) in features" :key="index">
-                    {{ feature.photo }} {{ feature.name }} - {{ feature.role }}
+                <div v-for="(member, index) in team" :key="index">
+                    <img src="../assets/bianca.jpg">
+                    <img :src="member.photopath" :alt="member.name"> <br> {{ member.name }} <br> {{ member.role }}
                 </div>
             </div>
         </div>
@@ -15,40 +16,51 @@
 
 <script setup>
 var bianca = require('../assets/bianca.jpg');
-var august = require('../assets/bianca.jpg');
-var max = require('../assets/bianca.jpg');
-var andreas = require('../assets/bianca.jpg');
-var laura = require('../assets/bianca.jpg');
+var august = require('../assets/august2.png');
+var max = require('../assets/max.jpg');
+var andreas = require('../assets/andreas.jpg');
+var laura = require('../assets/laura.jpg');
 
 export default {
     data() {
         return {
         currentElement: null,
-        features: [
+        team: [
             {
                 name: "Bianca Budulacu",
-                role: "role",
-                photo: bianca
+                role: "Graphics Lead",
+                photo: require('../assets/bianca.jpg'),
+                photoname: "bianca",
+                photopath: "/assets/bianca.jpg"
             },
             {
                 name: "August Danell",
-                role: "role",
-                photo: august2
+                role: "Business Reporter Lead",
+                photo: require('../assets/august2.png'),
+                photoname: "august2",
+                photopath: "../assets/august2.jpg"
+                
             },
             {
                 name: "Max Wippich",
-                role: "role",
-                photo: max
+                role: "Game Development Lead",
+                photo: require('../assets/max.jpg'),
+                photoname: "max",
+                photopath: "../assets/max.jpg"
             },
             {
                 name: "Andreas Wrife",
-                role: "role",
-                photo: andreas
+                role: "Project Management Lead",
+                photo: require('../assets/andreas.jpg'),
+                photoname: "andreas",
+                photopath: "../assets/andreas.jpg"
             },
             {
                 name: "Laura Yang",
-                role: "role",
-                photo: laura
+                role: "Jack of All Trades",
+                photo: require('../assets/laura.jpg'),
+                photoname: "laura",
+                photopath: "../assets/laura.jpg"
             }
         ]
         };
