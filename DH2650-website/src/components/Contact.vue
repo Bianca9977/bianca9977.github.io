@@ -33,7 +33,7 @@ export default {
             {
                 name: "August Danell",
                 role: "role",
-                photo: august
+                photo: august2
             },
             {
                 name: "Max Wippich",
