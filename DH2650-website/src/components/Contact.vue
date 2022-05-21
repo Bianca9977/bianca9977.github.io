@@ -4,7 +4,6 @@
             <h3 class="xl:text-6xl text-center">
                 The Team Test
             </h3>
-            <div class="bg"></div>
             <div class="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-5 mt-16">
                 <div v-for="(member, index) in team" :key="index">
                     <img :src="member.photo" :alt="member.name"> <br> {{ member.name }} <br> {{ member.role }}
@@ -58,7 +57,7 @@ export default {
             {
                 name: "Laura Yang",
                 role: "Jack of All Trades",
-                photo: "images/laura2.jpg",
+                photo: "Images/laura2.jpg",
                 photoname: "laura.jpg",
                 photopath: "../assets/laura.jpg"
             }
