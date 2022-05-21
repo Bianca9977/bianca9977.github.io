@@ -2,7 +2,7 @@
     <nav class="bg-white fixed mt-0 z-10 h-10" 
             @mouseover="navbarHover = true"
             @mouseleave="navbarHover = false"
-            :class="((navbarHover || !scroll) ? 'increaseOpacity' : 'opacity-50')">
+            :class="((navbarHover ) ? 'increaseOpacity' : 'opacity-50')" id="navbar">
             <div class="container flex flex-wrap justify-between items-center mx-auto h-full">
                 <div class="hidden w-full md:block md:w-auto" >
                     <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
@@ -49,6 +49,7 @@
 </template>
 
 <script>
+import { bus } from '../main';
 
     export default {
         name: 'NavBar',
@@ -66,7 +67,7 @@
         mounted: function() {
             var self = this;
 
-            var sections = document.querySelectorAll("#gamestory, #features, #easter-eggs, #contact");
+            var sections = document.querySelectorAll("#gamestory, #features, #easter-eggs, #contact, #transition");
             
             document.addEventListener('scroll', function(e) {
                 if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
@@ -84,13 +85,24 @@
                     const sectionTop = current.offsetTop - 50;
                     var sectionId = current.getAttribute("id");
                     
-                    if (scrollY > sectionTop &&scrollY <= sectionTop + sectionHeight)
+                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight)
                     {
-                        document.getElementById('nav-' + sectionId).classList.add('nav-active');
+                        self.currentSection = sectionId;
+
+                        if (sectionId != 'transition') { 
+                            document.getElementById('nav-' + sectionId).classList.add('nav-active');
+                        }
                     } else {
-                        document.getElementById('nav-' + sectionId).classList.remove('nav-active');
+
+                        if (sectionId != 'transition') { 
+                            document.getElementById('nav-' + sectionId).classList.remove('nav-active');
+                        }
                     }
                 }); 
+
+                if (self.currentSection == 'transition') {
+                    bus.$emit('transitionSections'); 
+                }
             });
             
         },

@@ -4,8 +4,9 @@
     <NavBar/> 
     <GameStory/>
     <Features/>
-    <EasterEggs/>
+    <Screenshots/>
     <Contact/>
+    <Transition />
     <div v-if="showTopBtn" @click="goToTop" class="backToTopBtn">
       <button>TOP</button>
     </div>
@@ -16,14 +17,16 @@
 import VideoTrailer from '../components/VideoTrailer.vue';
 import GameStory from '../components/GameStory.vue';
 import Features from '../components/Features.vue';
+import Screenshots from '../components/Screenshots.vue';
 import EasterEggs from '../components/EasterEggs.vue';
 import Contact from '../components/Contact.vue';
 import NavBar from '../components/NavBar.vue';
+import Transition from '../components/Transition.vue';
 import { bus } from '../main';
 
 export default {
   name: "Homepage",
-  components: {VideoTrailer, GameStory, Features, EasterEggs, Contact, NavBar},
+  components: {VideoTrailer, GameStory, Features, Screenshots, Contact, NavBar, Transition},
   data() {
       return {
         skippedVideo: false,
@@ -38,6 +41,10 @@ export default {
     
       this.skippedVideo = true;
         document.getElementById('webContainer').classList.add('show-content');
+    });
+
+    bus.$on('transitionSections', function() {
+      self.loopToTop();
     });
 
     document.addEventListener('scroll', function(e) {
@@ -56,6 +63,27 @@ export default {
         top: 0,
         behavior: "smooth"
       });
+    },
+
+    loopToTop: function() {
+      window.scrollTo({
+        top: 0,
+        behavior: "auto"
+      });
+
+      document.getElementById('gamestory').classList.add('slide-in-animation');
+      document.getElementById('navbar').style.visibility = 'hidden';
+
+      setTimeout(() => {
+        document.getElementById('navbar').style.visibility = 'visible';
+        document.getElementById('navbar').classList.add('increaseOpacity-transition');
+      }, 1500); 
+
+      setTimeout(() => {
+        document.getElementById('gamestory').classList.remove('slide-in-animation');
+        document.getElementById('navbar').classList.remove('increaseOpacity-transition');
+      }, 2000);
+
     }
   }
 }
