@@ -57,7 +57,7 @@ export default {
             {
                 name: "Laura Yang",
                 role: "Jack of All Trades",
-                photo: "Images/laura2.jpg",
+                photo: "laura2.jpg",
                 photoname: "laura.jpg",
                 photopath: "../assets/laura.jpg"
             }
