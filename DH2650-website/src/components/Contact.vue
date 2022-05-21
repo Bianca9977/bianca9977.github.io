@@ -28,14 +28,14 @@ export default {
             {
                 name: "Bianca Budulacu",
                 role: "Graphics Lead",
-                photo: "img/bianca.jpg",
+                photo: require('../assets/bianca.jpg'),
                 photoname: "bianca.jpg",
                 photopath: "../assets/bianca.jpg"
             },
             {
                 name: "August Danell",
                 role: "Business Reporter Lead",
-                photo: "assets/august2.png",
+                photo: require('../assets/august2.png'),
                 photoname: "august2.png",
                 photopath: "../assets/august2.png"
                 
@@ -57,7 +57,7 @@ export default {
             {
                 name: "Laura Yang",
                 role: "Jack of All Trades",
-                photo: "laura2.jpg",
+                photo: require('../assets/laura.jpg'),
                 photoname: "laura.jpg",
                 photopath: "../assets/laura.jpg"
             }
