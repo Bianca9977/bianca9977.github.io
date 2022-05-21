@@ -58,7 +58,7 @@ export default {
             {
                 name: "Laura Yang",
                 role: "Jack of All Trades",
-                photo: require('../assets/laura.jpg'),
+                photo: "images/laura2.jpg",
                 photoname: "laura.jpg",
                 photopath: "../assets/laura.jpg"
             }
