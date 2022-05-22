@@ -7,9 +7,11 @@
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
+    "slick-carousel": "^1.8.1",
     "v-video-embed": "^1.0.8",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
+    "vue-slick-carousel": "^1.0.6",
     "vue-template-compiler": "^2.6.11",
     "vue3-carousel": "^0.1.40",
     "vuetify": "^2.6.5",

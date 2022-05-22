@@ -14,11 +14,6 @@
 </template>
 
 <script setup>
-var bianca = require('../assets/bianca.jpg');
-var august = require('../assets/august2.png');
-var max = require('../assets/max.jpg');
-var andreas = require('../assets/andreas.jpg');
-var laura = require('../assets/laura.jpg');
 
 export default {
     data() {
@@ -28,38 +23,28 @@ export default {
             {
                 name: "Bianca Budulacu",
                 role: "Graphics Lead",
-                photo: require('../assets/bianca.jpg'),
-                photoname: "bianca.jpg",
-                photopath: "../assets/bianca.jpg"
+                photo: require('../assets/bianca.png')
             },
             {
                 name: "August Danell",
                 role: "Business Reporter Lead",
-                photo: require('../assets/august2.png'),
-                photoname: "august2.png",
-                photopath: "../assets/august2.png"
+                photo: require('../assets/august.png')
                 
             },
             {
                 name: "Max Wippich",
                 role: "Game Development Lead",
-                photo: require('../assets/max.jpg'),
-                photoname: "max.jpg",
-                photopath: "../assets/max.jpg"
+                photo: require('../assets/max.png')
             },
             {
                 name: "Andreas Wrife",
                 role: "Project Management Lead",
-                photo: require('../assets/andreas.jpg'),
-                photoname: "andreas.jpg",
-                photopath: "../assets/andreas.jpg"
+                photo: require('../assets/andreas.png')
             },
             {
                 name: "Laura Yang",
                 role: "Jack of All Trades",
-                photo: require('../assets/laura.jpg'),
-                photoname: "laura.jpg",
-                photopath: "../assets/laura.jpg"
+                photo: require('../assets/laura.png')
             }
         ]
         };
