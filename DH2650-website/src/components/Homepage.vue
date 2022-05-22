@@ -39,8 +39,17 @@ export default {
 
     bus.$on('skipVideo', function() {
     
-      this.skippedVideo = true;
-        document.getElementById('webContainer').classList.add('show-content');
+      self.skippedVideo = true;
+      document.getElementById('webContainer').classList.add('show-content');
+
+      document.getElementById('gamestory').classList.add('slide-in-animation');
+      document.getElementById('navbar').classList.add('increaseOpacity-transition');
+
+      setTimeout(() => {
+        document.getElementById('gamestory').classList.remove('slide-in-animation');
+        document.getElementById('navbar').classList.remove('increaseOpacity-transition');
+      }, 2000);
+
     });
 
     bus.$on('transitionSections', function() {

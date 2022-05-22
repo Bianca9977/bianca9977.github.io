@@ -4,7 +4,7 @@
  -->          
         <div id="player"></div>
         <div class="skip-button">
-            <button @click="skipVideo" id="skipButton">
+            <button @click="skipVideo" id="skipButton" class="w-full">
                 SKIP VIDEO
             </button>
         </div>

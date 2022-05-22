@@ -1,10 +1,10 @@
 <template>
     <section id="gamestory" class = "gamestory">
-        <div class="container mx-auto p-5">
-            <h3>
+        <div class="container mx-auto p-5 h-full flex flex-col justify-center">
+            <h3 class="xl:text-6xl text-center">
                 Game Story
             </h3>
-            <p>
+            <p class="text-lg mx-6 2xl:mx-48 mt-12 text-center">
                 The player awakens from inside a temple of primordial evil, where the cold, stone floor itself seems to vibrate erringly. 
                 Dark wines cover the temple’s walls, growing rampantly and uncontrolled as no man has before entered the temple to tend them. 
                 No living man that is. A maleficent blue-green smoke erupts from the cracks of the temple floor, here rests a curse that cannot be escaped, not even upon one’s death. 

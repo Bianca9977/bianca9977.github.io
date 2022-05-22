@@ -4,16 +4,24 @@
 
 .homepage,
 .gamestory,
-.easter-eggs,
+.screenshots,
 .features,
 .contact {
     min-height: 100vh;
 
-    @media (min-width: 1280px) {
+    @media (min-width: 1280px) and (min-height: 900px) {
         width: 100%;
         height: 100vh;
     }
+
+    .container {
+        @media (max-height: 900px) {
+            padding-top: 6rem;
+        }
+    }
 }
+
+
 
 .transition {
     min-height: 100vh;
@@ -146,13 +154,25 @@ h3 {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $color_dark_blue;
+         background-color: $color_dark_blue;
         color: white;
 
         &.feature-hover {
-            background-color: $color_orange;
             color: $color_dark_blue;
+            animation-duration: 1s;
+            animation-name: background-change;
+            animation-fill-mode: forwards;
         }
+    }
+}
+
+@keyframes background-change {
+    from {
+      background-color: $color_dark_blue;
+    }
+  
+    to {
+        background-color: $color_orange;
     }
 }
 

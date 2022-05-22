@@ -1,5 +1,5 @@
 <template>
-    <section id="features" class = "features">
+    <section id="screenshots" class = "features">
         <div class="container mx-auto p-5 h-full flex flex-col justify-center">
             <h3 class="xl:text-6xl text-center">
                 Screenshots

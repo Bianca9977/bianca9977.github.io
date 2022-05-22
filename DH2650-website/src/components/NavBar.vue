@@ -1,5 +1,5 @@
 <template>
-    <nav class="bg-white fixed mt-0 z-10 h-10" 
+    <nav class="bg-white fixed mt-0 z-10 h-10 md:px-4" 
             @mouseover="navbarHover = true"
             @mouseleave="navbarHover = false"
             :class="((navbarHover ) ? 'increaseOpacity' : 'opacity-50')" id="navbar">
@@ -13,7 +13,7 @@
                             <button id="nav-features" @click="scrollToSection('features')">Features</button>
                         </li>
                         <li>
-                            <button id="nav-easter-eggs" @click="scrollToSection('easter-eggs')">Easter eggs</button>
+                            <button id="nav-screenshots" @click="scrollToSection('screenshots')">Gallery</button>
                         </li>
                         <li>
                             <button id="nav-contact" @click="scrollToSection('contact')">Contact</button>
@@ -22,9 +22,10 @@
                 </div>
 
                 <!-- MOBILE NAV -->
-                <div class="md:hidden">
-                    <button class="ml-4" @click="isMobileMenuVisible = true">
-                        Navbar
+                <div class="md:hidden px-8 w-full">
+                    <button class="flex w-full justify-between" @click="isMobileMenuVisible = true">
+                        <span>Curse of Hau</span>
+                        <img class="menu-icon" :src="require('../assets/menu.png')" />
                     </button>
                 </div>
                 <div v-if="isMobileMenuVisible" class="mobile-menu">
@@ -37,7 +38,7 @@
                             <button id="nav-features" @click="scrollToSection('features'); closeMenu()">Features</button>
                         </li>
                         <li class="text-4xl mb-6">
-                            <button id="nav-easter-eggs" @click="scrollToSection('easter-eggs'); closeMenu()">Easter eggs</button>
+                            <button id="nav-screenshots" @click="scrollToSection('screenshots'); closeMenu()">Gallery</button>
                         </li>
                         <li class="text-4xl mb-6">
                             <button id="nav-contact" @click="scrollToSection('contact'); closeMenu()">Contact</button>
@@ -67,7 +68,7 @@ import { bus } from '../main';
         mounted: function() {
             var self = this;
 
-            var sections = document.querySelectorAll("#gamestory, #features, #easter-eggs, #contact, #transition");
+            var sections = document.querySelectorAll("#gamestory, #features, #screenshots, #contact, #transition");
             
             document.addEventListener('scroll', function(e) {
                 if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
@@ -169,7 +170,7 @@ nav {
 
 @keyframes opacity-up {
   from {
-    opacity: 0.5;
+    opacity: 0.7;
   }
 
   to {
@@ -177,4 +178,7 @@ nav {
   }
 }
 
+.menu-icon {
+    max-width: 20px;
+}
 </style>
