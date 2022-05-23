@@ -64,6 +64,7 @@ export default {
         self.showTopBtn = false;
       }
     });
+
   },
 
   methods: {
