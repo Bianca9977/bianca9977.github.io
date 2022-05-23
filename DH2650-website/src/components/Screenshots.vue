@@ -2,7 +2,7 @@
     <section id="screenshots" class = "screenshots">
         <div class="container mx-auto py-2 px-4 2xl:px-0 h-full flex flex-col justify-center">
             <h3 class="xl:text-6xl text-center">
-                Screenshots
+                Gallery
             </h3>
             <br>
             <!-- i think it would be nice to make the screenshots section a horizontal scrolling image carousel, i'll look into that next -->
