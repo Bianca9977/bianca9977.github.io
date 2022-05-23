@@ -137,10 +137,12 @@ nav {
     font-family: 'El Messiri', sans-serif;
 
     button {
-        font-weight: 600;
-
+       // font-weight: 600;
+        color: black;
+        font-size: 18px;
+        
         &:hover {
-            color: #F17F29;
+            color: #43eba7;
         }
 
         &.btnClose {
@@ -151,7 +153,7 @@ nav {
     }
 
     .nav-active {
-        color: #F17F29;
+        color: #43eba7;
         text-decoration: underline;
     }
 
