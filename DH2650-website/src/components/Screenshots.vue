@@ -13,8 +13,8 @@
             </div>-->
             <div>
                 <VueSlickCarousel v-bind="settings">
-                <div v-for="(image, index) in screenshots" :key="index">
-                    <img :src="image.photo" :alt="image.name" :width="450" :height="450">
+                <div v-for="(image, index) in screenshots" :key="index" class="screenshot">
+                    <img :src="image.photo" :alt="image.name" :width="450" :height="450" @click="openPhoto(image.photo)">
                 </div>
                 </VueSlickCarousel>
             </div>
@@ -23,6 +23,7 @@
 </template>
 
 <script setup>
+    import { bus } from '../main';
     import VueSlickCarousel from 'vue-slick-carousel'
     import 'vue-slick-carousel/dist/vue-slick-carousel.css'
     // optional style for arrows & dots
@@ -72,6 +73,10 @@
         },
 
         methods: {
+            openPhoto: function(image) {
+       
+                bus.$emit("openPhoto", image);
+            }
         }
     }
 
