@@ -8,10 +8,10 @@
                 <div v-for="(feature, index) in features" :key="index" 
                     @mouseover="currentElement = index"
                     @mouseleave="currentElement = null"
-                    class="feature"
+                    class="feature text-center p-3 md:p-5"
                     :class="(currentElement == index) ? 'feature-hover' : ''">
-                    <span v-if="currentElement == index" >{{ feature.textHover }}</span>
-                    <span v-else>{{ feature.text }}</span>
+                    <span v-if="currentElement == index" class="text-xl" v-html="feature.textHover"></span>
+                    <span v-else class="uppercase text-2xl md:text-3xl" v-html="feature.text"></span>
                 </div>
             </div>
         </div>
@@ -25,36 +25,36 @@ export default {
         currentElement: null,
         features: [
             {
-                text: "Feature 1",
-                textHover: "Feature 1 Hover"
+                text: "Survival",
+                textHover: "The player has to acquire food and build some form of shelter in order to survive."
             },
             {
-                text: "Feature 2",
-                textHover: "Feature 2 Hover"
+                text: "Roguelike",
+                textHover: "Once the player dies, the game resets but with the accumulation of the 'resolve' currency that is persistent through multiple playthrough."
             },
             {
-                text: "Feature 3",
-                textHover: "Feature 3 Hover"
+                text: "Open World",
+                textHover: "Explore the island in order to collect resources, fight enemies, farm and build your base."
             },
             {
-                text: "Feature 4",
-                textHover: "Feature 4 Hover"
+                text: "Building and Farming",
+                textHover: "Collect materials, farm crops, build structures and collect blueprints"
             },
             {
-                text: "Feature 5",
-                textHover: "Feature 5 Hover"
+                text: "Character<br/> Growth",
+                textHover: "Buy permanent upgrades for your characters with the 'resolve' currency in order to become more powerful."
             },
             {
-                text: "Feature 6",
-                textHover: "Feature 6 Hover"
+                text: "Enemies",
+                textHover: "Spawning at night, on the island there are multiple dangerous enemies, tiki masks, troglodytes and more. These enemies are drawn to the player and will attack the player on sight. "
             },
             {
-                text: "Feature 7",
-                textHover: "Feature 7 Hover"
+                text: "Procedural Generation",
+                textHover: "In accordance with the rougelike concept the world is generated anew each time the player dies with items randomly spawned on the island."
             },
             {
-                text: "Feature 8",
-                textHover: "Feature 8 Hover"
+                text: "Tiki - Voodoo<br/> theme",
+                textHover: "Culturally, the curse of Hau is a curse in accordance with Polynesian lore and culture, specifically the curse of Hau pertains to the entrapment of one’s soul."
             },
         ]
         };
