@@ -16,7 +16,7 @@
 
     .container {
         @media (max-height: 900px) {
-            padding-top: 6rem;
+            padding-top: 5rem;
         }
     }
 }
@@ -25,7 +25,10 @@
 
 .transition {
     min-height: 100vh;
-    background-color: black;
+    //background-color: black;
+    background-image: url('../assets/transition_bg.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .web_container {
@@ -84,7 +87,7 @@
 
 h3 {
     font-size: 1.2rem;
-    font-family: 'Acme', sans-serif;
+    font-family: 'El Messiri', sans-serif;
 }
 
 .gamestory {

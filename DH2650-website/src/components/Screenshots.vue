@@ -1,6 +1,6 @@
 <template>
     <section id="screenshots" class = "screenshots">
-        <div class="container mx-auto p-5 h-full flex flex-col justify-center">
+        <div class="container mx-auto py-2 px-4 2xl:px-0 h-full flex flex-col justify-center">
             <h3 class="xl:text-6xl text-center">
                 Screenshots
             </h3>

@@ -4,8 +4,9 @@
             @mouseleave="navbarHover = false"
             :class="((navbarHover ) ? 'increaseOpacity' : 'opacity-50')" id="navbar">
             <div class="container flex flex-wrap justify-between items-center mx-auto h-full">
-                <div class="hidden w-full md:block md:w-auto" >
-                    <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                <div class="hidden md:flex items-center w-full justify-between">
+                    <img class="logo-icon" :src="require('../assets/logo.png')" />
+                    <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-semibold">
                         <li>
                             <button id="nav-gamestory" @click="scrollToSection('gamestory')">Game Story</button>
                         </li>
@@ -23,8 +24,8 @@
 
                 <!-- MOBILE NAV -->
                 <div class="md:hidden px-8 w-full">
-                    <button class="flex w-full justify-between" @click="isMobileMenuVisible = true">
-                        <span>Curse of Hau</span>
+                    <button class="flex w-full justify-between items-center" @click="isMobileMenuVisible = true">
+                        <img class="logo-icon" :src="require('../assets/logo.png')" />
                         <img class="menu-icon" :src="require('../assets/menu.png')" />
                     </button>
                 </div>
@@ -133,9 +134,11 @@ import { bus } from '../main';
 
 <style lang="scss" scoped>
 nav {
-    font-family: 'Acme', sans-serif;
+    font-family: 'El Messiri', sans-serif;
 
     button {
+        font-weight: 600;
+
         &:hover {
             color: #F17F29;
         }
@@ -180,5 +183,8 @@ nav {
 
 .menu-icon {
     max-width: 20px;
+}
+.logo-icon {
+    max-height: 40px;
 }
 </style>
