@@ -1,11 +1,12 @@
 <template>
-    <nav class="bg-white fixed mt-0 z-10 h-10" 
+    <nav class="bg-white fixed mt-0 z-10 h-10 md:px-4" 
             @mouseover="navbarHover = true"
             @mouseleave="navbarHover = false"
             :class="((navbarHover ) ? 'increaseOpacity' : 'opacity-50')" id="navbar">
             <div class="container flex flex-wrap justify-between items-center mx-auto h-full">
-                <div class="hidden w-full md:block md:w-auto" >
-                    <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                <div class="hidden md:flex items-center w-full justify-between">
+                    <img class="logo-icon" :src="require('../assets/logo.png')" />
+                    <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-semibold">
                         <li>
                             <button id="nav-gamestory" @click="scrollToSection('gamestory')">Game Story</button>
                         </li>
@@ -13,7 +14,7 @@
                             <button id="nav-features" @click="scrollToSection('features')">Features</button>
                         </li>
                         <li>
-                            <button id="nav-easter-eggs" @click="scrollToSection('easter-eggs')">Easter eggs</button>
+                            <button id="nav-screenshots" @click="scrollToSection('screenshots')">Gallery</button>
                         </li>
                         <li>
                             <button id="nav-contact" @click="scrollToSection('contact')">Contact</button>
@@ -22,9 +23,10 @@
                 </div>
 
                 <!-- MOBILE NAV -->
-                <div class="md:hidden">
-                    <button class="ml-4" @click="isMobileMenuVisible = true">
-                        Navbar
+                <div class="md:hidden px-8 w-full">
+                    <button class="flex w-full justify-between items-center" @click="isMobileMenuVisible = true">
+                        <img class="logo-icon" :src="require('../assets/logo.png')" />
+                        <img class="menu-icon" :src="require('../assets/menu.png')" />
                     </button>
                 </div>
                 <div v-if="isMobileMenuVisible" class="mobile-menu">
@@ -37,7 +39,7 @@
                             <button id="nav-features" @click="scrollToSection('features'); closeMenu()">Features</button>
                         </li>
                         <li class="text-4xl mb-6">
-                            <button id="nav-easter-eggs" @click="scrollToSection('easter-eggs'); closeMenu()">Easter eggs</button>
+                            <button id="nav-screenshots" @click="scrollToSection('screenshots'); closeMenu()">Gallery</button>
                         </li>
                         <li class="text-4xl mb-6">
                             <button id="nav-contact" @click="scrollToSection('contact'); closeMenu()">Contact</button>
@@ -67,7 +69,7 @@ import { bus } from '../main';
         mounted: function() {
             var self = this;
 
-            var sections = document.querySelectorAll("#gamestory, #features, #easter-eggs, #contact, #transition");
+            var sections = document.querySelectorAll("#gamestory, #features, #screenshots, #contact, #transition");
             
             document.addEventListener('scroll', function(e) {
                 if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
@@ -132,9 +134,11 @@ import { bus } from '../main';
 
 <style lang="scss" scoped>
 nav {
-    font-family: 'Acme', sans-serif;
+    font-family: 'El Messiri', sans-serif;
 
     button {
+        font-weight: 600;
+
         &:hover {
             color: #F17F29;
         }
@@ -169,7 +173,7 @@ nav {
 
 @keyframes opacity-up {
   from {
-    opacity: 0.5;
+    opacity: 0.7;
   }
 
   to {
@@ -177,4 +181,10 @@ nav {
   }
 }
 
+.menu-icon {
+    max-width: 20px;
+}
+.logo-icon {
+    max-height: 40px;
+}
 </style>

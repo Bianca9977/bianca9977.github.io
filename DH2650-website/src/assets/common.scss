@@ -4,20 +4,31 @@
 
 .homepage,
 .gamestory,
-.easter-eggs,
+.screenshots,
 .features,
 .contact {
     min-height: 100vh;
 
-    @media (min-width: 1280px) {
+    @media (min-width: 1280px) and (min-height: 900px) {
         width: 100%;
         height: 100vh;
     }
+
+    .container {
+        @media (max-height: 900px) {
+            padding-top: 5rem;
+        }
+    }
 }
+
+
 
 .transition {
     min-height: 100vh;
-    background-color: black;
+    //background-color: black;
+    background-image: url('../assets/transition_bg.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .web_container {
@@ -76,7 +87,7 @@
 
 h3 {
     font-size: 1.2rem;
-    font-family: 'Acme', sans-serif;
+    font-family: 'El Messiri', sans-serif;
 }
 
 .gamestory {
@@ -145,13 +156,34 @@ h3 {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $color_dark_blue;
+         background-color: $color_dark_blue;
         color: white;
 
         &.feature-hover {
-            background-color: $color_orange;
             color: $color_dark_blue;
+            animation-duration: 1s;
+            animation-name: background-change;
+            animation-fill-mode: forwards;
         }
+    }
+}
+
+.screenshots {
+    background-color: darkolivegreen;
+
+    .screenshots-container {
+        gap: 20px;
+    }
+
+}
+
+@keyframes background-change {
+    from {
+      background-color: $color_dark_blue;
+    }
+  
+    to {
+        background-color: $color_orange;
     }
 }
 

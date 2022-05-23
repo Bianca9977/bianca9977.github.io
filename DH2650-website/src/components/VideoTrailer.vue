@@ -4,7 +4,7 @@
  -->          
         <div id="player"></div>
         <div class="skip-button">
-            <button @click="skipVideo" id="skipButton">
+            <button @click="skipVideo" id="skipButton" class="w-full">
                 SKIP VIDEO
             </button>
         </div>
@@ -48,7 +48,7 @@
                 console.log("initYoutube");
                 this.player = new YT.Player("player", {
 
-                    videoId: "dQw4w9WgXcQ",
+                    videoId: "eALTHo3zG_g",
                     events: {
                     onReady: _.onPlayerReady,
                     onStateChange: _.onPlayerStateChange
