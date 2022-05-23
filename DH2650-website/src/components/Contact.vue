@@ -6,7 +6,9 @@
             </h3>
             <div class="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-5 mt-16 mx-auto">
                 <div data-aos="zoom-in" data-aos-duration="1500" v-for="(member, index) in team" :key="index">
-                    <img :src="member.photo" :alt="member.name" /> 
+                    <div class="overflow-hidden">
+                        <img :src="member.photo" :alt="member.name" /> 
+                    </div>
                     <p class="text-center mt-4">
                         <span class="text-2xl">{{ member.name }}</span><br> 
                         <span class="">{{ member.role }}</span>
