@@ -139,6 +139,7 @@ nav {
     button {
        // font-weight: 600;
         color: black;
+        font-size: 18px;
         
         &:hover {
             color: #43eba7;
