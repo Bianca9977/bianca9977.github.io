@@ -4,6 +4,7 @@
             <h3 class="xl:text-6xl text-center">
                 Screenshots
             </h3>
+            <br>
             <!-- i think it would be nice to make the screenshots section a horizontal scrolling image carousel, i'll look into that next -->
             <!--<div class="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-16">
                 <div v-for="(image, index) in screenshots" :key="index">
@@ -13,7 +14,7 @@
             <div>
                 <VueSlickCarousel v-bind="settings">
                 <div v-for="(image, index) in screenshots" :key="index">
-                    <img :src="image.photo" :alt="image.name">
+                    <img :src="image.photo" :alt="image.name" :width="450" :height="450">
                 </div>
                 </VueSlickCarousel>
             </div>
@@ -34,32 +35,33 @@
             return {
             settings: {
                 "centerMode": true,
-                "centerPadding": "20px",
+                "centerPadding": "30px",
                 "focusOnSelect": true,
                 "infinite": true,
                 "slidesToShow": 3,
-                "speed": 500
+                "speed": 500,
             },
             currentElement: null,
             screenshots: [
                 {
-                    photo: require('../assets/august2.png')
+                    photo: require('../assets/screenshots/ss1.png')
                 },
                 {
-                    photo: require('../assets/august2.png')
+                    photo: require('../assets/screenshots/ss2.png')
                 },
                 {
-                    photo: require('../assets/august2.png')
+                    photo: require('../assets/screenshots/ss3.png')
                 },
                 {
-                    photo: require('../assets/august2.png')
+                    photo: require('../assets/screenshots/ss4.png')
                 },
                 {
-                    photo: require('../assets/august2.png')
+                    photo: require('../assets/screenshots/ss5.png')
                 },
                 {
-                    photo: require('../assets/august2.png')
-                }
+                    
+                    photo: require('../assets/screenshots/ss6.png')
+                },
             ]
             };
         },
