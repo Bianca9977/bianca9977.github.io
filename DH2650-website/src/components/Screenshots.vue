@@ -1,6 +1,6 @@
 <template>
     <section id="screenshots" class = "screenshots">
-        <div data-aos="fade-up" data-aos-duration="1500" class="container mx-auto py-2 px-4 2xl:px-0 h-full flex flex-col justify-center">
+        <div class="container mx-auto py-2 px-4 2xl:px-0 h-full flex flex-col justify-center">
             <h3 class="xl:text-6xl text-center">
                 Gallery
             </h3>
