@@ -1,7 +1,7 @@
 <template>
     <section id="contact" class = "contact">
         <div class="container mx-auto py-2 px-4 2xl:px-0 h-full flex flex-col justify-center">
-            <h3 class="xl:text-6xl text-center">
+            <h3 class="text-4xl xl:text-6xl text-center">
                 The Team
             </h3>
             <div class="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-5 mt-16 mx-auto">

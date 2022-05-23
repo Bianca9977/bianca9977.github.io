@@ -13,9 +13,9 @@
                 The player must gather resources, engage in pitiless combat with the soulless victims of the island, explore in the island’s four directions, and ultimately defeat the evil entity inside, the evil deity known as Möbius. 
                 Only then can the curse of Hau be surely lifted. 
             </p>
-            <h2>
+           <!--  <h2>
                 include how to play section
-            </h2>
+            </h2> -->
         </div>
     </section>
 </template>
