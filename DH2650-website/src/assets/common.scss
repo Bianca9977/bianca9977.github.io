@@ -88,6 +88,7 @@
 h3 {
     font-size: 1.2rem;
     font-family: 'El Messiri', sans-serif;
+    color: blue;
 }
 
 .gamestory {
@@ -187,19 +188,20 @@ h3 {
     }
 }
 
-.easter-eggs {
-    background-color: $color_dark_green;
-
-    p, h3 {
-        color: white;
-    }
-}
-
 .contact {
     background-color: $color_dark_grey;
 
-    p, h3 {
+    p{
         color: white;
+    }
+
+    img {
+        width: 100%;
+        transition: 0.5s all ease-in-out;
+
+        &:hover {
+            transform: scale(1.2);
+        }
     }
 }
 

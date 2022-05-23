@@ -10,6 +10,9 @@
     <div v-if="showTopBtn" @click="goToTop" class="backToTopBtn">
       <button>TOP</button>
     </div>
+    <div class="img-overlay" @click="closeOverlay" :class="zoomImage ? 'flex' : 'hidden'">
+      <img id="zoomedImage"   />
+    </div>
   </div>
 </template>
 
@@ -31,6 +34,7 @@ export default {
       return {
         skippedVideo: false,
         showTopBtn: false,
+        zoomImage: false,    
       }
   },
 
@@ -56,6 +60,12 @@ export default {
       self.loopToTop();
     });
 
+    bus.$on('openPhoto', function(image) {
+      var element = document.getElementById('zoomedImage');
+      element.src = image;
+      self.zoomImage = true;
+    })
+
     document.addEventListener('scroll', function(e) {
       if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         self.showTopBtn = true;
@@ -64,6 +74,7 @@ export default {
         self.showTopBtn = false;
       }
     });
+
   },
 
   methods: {
@@ -93,6 +104,12 @@ export default {
         document.getElementById('navbar').classList.remove('increaseOpacity-transition');
       }, 2000);
 
+    },
+
+    closeOverlay: function() {
+      var self = this;
+
+      self.zoomImage = false;
     }
   }
 }
@@ -129,5 +146,15 @@ h3 {
     overflow: auto;
     height: auto;
   }
+}
+
+.img-overlay {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, .75);
+  justify-content: center;
+  align-items: center;
 }
 </style>
