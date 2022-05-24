@@ -178,6 +178,19 @@ h3 {
         gap: 20px;
     }
 
+    img {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+}
+
+.img-overlay {
+    img {
+        max-width: 80%;
+        max-height: 80%;
+    }
 }
 
 @keyframes background-change {
@@ -197,13 +210,27 @@ h3 {
         color: white;
     }
 
-    img {
+    .member-img {
         width: 100%;
         transition: 0.5s all ease-in-out;
 
         &:hover {
             transform: scale(1.2);
         }
+    }
+
+    .link {
+        img {
+            max-width: 20px;
+        }
+    }
+}
+
+a {
+    background-color: transparent;
+
+    &:hover {
+        background-color: transparent !important;
     }
 }
 

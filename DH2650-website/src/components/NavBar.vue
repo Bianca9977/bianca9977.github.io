@@ -142,7 +142,7 @@ nav {
         font-size: 18px;
         
         &:hover {
-            color: #43eba7;
+            color: #22855c;
         }
 
         &.btnClose {
@@ -153,7 +153,7 @@ nav {
     }
 
     .nav-active {
-        color: #43eba7;
+        color: #22855c;
         text-decoration: underline;
     }
 
