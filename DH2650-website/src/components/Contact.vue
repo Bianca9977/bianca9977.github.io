@@ -83,8 +83,10 @@ export default {
                 role: "Jack of All Trades",
                 photo: require('../assets/laura.png'),
                 links: [
-                    title: 'LinkedIn',
-                    url: 'https://www.linkedin.com/in/laura-yang/'
+                    {
+                        title: 'LinkedIn',
+                        url: 'https://www.linkedin.com/in/laura-yang/'
+                    }
                 ]
             }
         ]
