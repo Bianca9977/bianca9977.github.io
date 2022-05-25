@@ -11,7 +11,10 @@
                     class="feature text-center p-3 md:p-5"
                     :class="(currentElement == index) ? 'feature-hover' : ''">
                     <span v-if="currentElement == index" class="text-xl" v-html="feature.textHover"></span>
-                    <span v-else class="uppercase text-2xl md:text-3xl" v-html="feature.text"></span>
+                    <div class="flex flex-col items-center justify-center" v-else>
+                        <img class="icon" :src="feature.icon" />
+                        <span class="uppercase text-2xl md:text-3xl" v-html="feature.text"></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -26,35 +29,43 @@ export default {
         features: [
             {
                 text: "Survival",
-                textHover: "The player has to acquire food and build some form of shelter in order to survive."
+                textHover: "The player has to acquire food and build some form of shelter in order to survive.",
+                icon: require('../assets/icons/fire.svg')
             },
             {
                 text: "Roguelike",
-                textHover: "Once the player dies, the game resets but with the accumulation of the 'resolve' currency that is persistent through multiple playthrough."
+                textHover: "Once the player dies, the game resets with the accumulation of the 'resolve' currency which is persistent through multiple playthroughs.",
+                icon: require('../assets/icons/run.svg')
             },
             {
                 text: "Open World",
-                textHover: "Explore the island in order to collect resources, fight enemies, farm and build your base."
-            },
-            {
-                text: "Building and Farming",
-                textHover: "Collect materials, farm crops, build structures and collect blueprints"
-            },
-            {
-                text: "Character<br/> Growth",
-                textHover: "Buy permanent upgrades for your characters with the 'resolve' currency in order to become more powerful."
+                textHover: "Explore the island in order to collect resources, fight enemies, farm and build your base.",
+                icon: require('../assets/icons/explore.svg')
             },
             {
                 text: "Enemies",
-                textHover: "Spawning at night, on the island there are multiple dangerous enemies, tiki masks, troglodytes and more. These enemies are drawn to the player and will attack the player on sight. "
+                textHover: "Spawning at night, on the island there are multiple dangerous enemies, tiki masks, troglodytes and more. These enemies are drawn to the player and will attack the player on sight.",
+                icon: require('../assets/icons/danger.svg')
+            },
+            {
+                text: "Character<br/> Growth",
+                textHover: "Buy permanent upgrades for your characters with the 'resolve' currency in order to become more powerful.",
+                icon: require('../assets/icons/person.svg')
+            },
+            {
+                text: "Building and Farming",
+                textHover: "Build fences to protect yourself at night and plant ginger and sweet potatoes to gain energy.",
+                icon: require('../assets/icons/farming.svg')
             },
             {
                 text: "Procedural Generation",
-                textHover: "In accordance with the rougelike concept the world is generated anew each time the player dies with items randomly spawned on the island."
+                textHover: "In accordance with the rougelike concept the world is generated anew each time the player dies with items randomly spawned on the island.",
+                icon: require('../assets/icons/hexagon.svg')
             },
             {
                 text: "Tiki - Voodoo<br/> theme",
-                textHover: "Culturally, the curse of Hau is a curse in accordance with Polynesian lore and culture, specifically the curse of Hau pertains to the entrapment of one’s soul."
+                textHover: "Culturally, the curse of Hau is a curse in accordance with Polynesian lore and culture, specifically the curse of Hau pertains to the entrapment of one’s soul.",
+                icon: require('../assets/icons/rainbow.svg')
             },
         ]
         };
