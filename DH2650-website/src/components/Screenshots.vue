@@ -75,6 +75,9 @@
                 {     
                     photo: require('../assets/screenshots/s6.jpg'),
                     photoBig: require('../assets/screenshots/s6_big.jpg')
+                },{     
+                    photo: require('../assets/screenshots/s7.jpg'),
+                    photoBig: require('../assets/screenshots/s7_big.jpg')
                 },
             ]
             };
