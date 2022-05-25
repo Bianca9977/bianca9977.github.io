@@ -5,7 +5,7 @@
                 Game Story
             </h3> -->
             <img class="max-w-xs md:max-w-md mx-auto 2xl:max-w-3xl" :src="require('../assets/logo_gif.gif')" />
-            <p class="text-lg mx-6 2xl:mx-48 mt-4 text-center">
+            <p class="text-lg 2xl:text-2xl mx-6 2xl:mx-48 mt-8 text-center">
                 The player awakens from inside a temple of primordial evil, where the cold, stone floor itself seems to vibrate erringly. 
                 Dark wines cover the temple’s walls, growing rampantly and uncontrolled as no man has before entered the temple to tend them. 
                 No living man that is. A maleficent blue-green smoke erupts from the cracks of the temple floor, here rests a curse that cannot be escaped, not even upon one’s death. 
@@ -16,6 +16,9 @@
            <!--  <h2>
                 include how to play section
             </h2> -->
+            <a class="game-link mb-10 md:mb-0" href="https://drive.google.com/file/d/1uqmfWdAwUMyB-oeguEUQsoW3dpiu-YEd/view?usp=sharing" target="_blank">
+                Download
+            </a> 
         </div>
     </section>
 </template>

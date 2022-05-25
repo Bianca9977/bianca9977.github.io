@@ -1,6 +1,6 @@
 <template>
     <section id="screenshots" class = "screenshots">
-        <div class="container mx-auto py-2 px-4 2xl:px-0 h-full flex flex-col justify-center">
+        <div data-aos="fade-up" data-aos-duration="1500" class="container mx-auto py-2 px-8 md:px-4 2xl:px-0 h-full flex flex-col justify-center">
             <h3 class="text-4xl xl:text-6xl text-center">
                 Gallery
             </h3>
@@ -13,9 +13,9 @@
             </div>-->
             <div class="mt-16">
                 <VueSlickCarousel v-bind="settings">
-                <div v-for="(image, index) in screenshots" :key="index" class="screenshot">
-                    <img :src="image.photo" :alt="image.name" :width="450" :height="450" @click="openPhoto(image.photo)">
-                </div>
+                    <div v-for="(image, index) in screenshots" :key="index" class="screenshot">
+                        <img :src="image.photo" :alt="image.name" :width="450" :height="450" @click="openPhoto(image.photoBig)">
+                    </div>
                 </VueSlickCarousel>
             </div>
         </div>
@@ -41,27 +41,43 @@
                 "infinite": true,
                 "slidesToShow": 3,
                 "speed": 500,
+                "responsive": [
+                    {
+                        "breakpoint": 1024,
+                        "settings": {
+                            "slidesToShow": 1,
+                        }
+                    }
+                ]
             },
             currentElement: null,
             screenshots: [
                 {
-                    photo: require('../assets/screenshots/ss1.png')
+                    photo: require('../assets/screenshots/s1.jpg'),
+                    photoBig: require('../assets/screenshots/s1_big.jpg')
                 },
                 {
-                    photo: require('../assets/screenshots/ss2.png')
+                    photo: require('../assets/screenshots/s2.jpg'),
+                    photoBig: require('../assets/screenshots/s2_big.jpg')
                 },
                 {
-                    photo: require('../assets/screenshots/ss3.png')
+                    photo: require('../assets/screenshots/s3.jpg'),
+                    photoBig: require('../assets/screenshots/s3_big.jpg')
                 },
                 {
-                    photo: require('../assets/screenshots/ss4.png')
+                    photo: require('../assets/screenshots/s4.jpg'),
+                    photoBig: require('../assets/screenshots/s4_big.jpg')
                 },
                 {
-                    photo: require('../assets/screenshots/ss5.png')
+                    photo: require('../assets/screenshots/s5.jpg'),
+                    photoBig: require('../assets/screenshots/s5_big.jpg')
                 },
-                {
-                    
-                    photo: require('../assets/screenshots/ss6.png')
+                {     
+                    photo: require('../assets/screenshots/s6.jpg'),
+                    photoBig: require('../assets/screenshots/s6_big.jpg')
+                },{     
+                    photo: require('../assets/screenshots/s7.jpg'),
+                    photoBig: require('../assets/screenshots/s7_big.jpg')
                 },
             ]
             };

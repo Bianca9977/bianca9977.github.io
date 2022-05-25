@@ -8,7 +8,7 @@
     <Contact/>
     <Transition />
     <div v-if="showTopBtn" @click="goToTop" class="backToTopBtn">
-      <button>TOP</button>
+      <button class="font-bold">TOP</button>
     </div>
     <div class="img-overlay" @click="closeOverlay" :class="zoomImage ? 'flex' : 'hidden'">
       <img id="zoomedImage"   />
