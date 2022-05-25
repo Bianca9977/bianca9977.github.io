@@ -84,6 +84,10 @@ export default {
                 photo: require('../assets/laura.png'),
                 links: [
                     {
+                        title: 'Website',
+                        url: 'http://laura.yang.ca/'
+                    },
+                    {
                         title: 'LinkedIn',
                         url: 'https://www.linkedin.com/in/laura-yang/'
                     }
