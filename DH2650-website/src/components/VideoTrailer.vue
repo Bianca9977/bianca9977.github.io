@@ -48,7 +48,7 @@
                 console.log("initYoutube");
                 this.player = new YT.Player("player", {
 
-                    videoId: "eALTHo3zG_g",
+                    videoId: "qM7VPyar4Z0",
                     events: {
                     onReady: _.onPlayerReady,
                     onStateChange: _.onPlayerStateChange
