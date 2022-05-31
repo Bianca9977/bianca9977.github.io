@@ -5,7 +5,7 @@
                 The Team
             </h3>
             <div class="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-5 mt-16 mx-auto">
-                <div data-aos="zoom-in" data-aos-duration="1500" v-for="(member, index) in team" :key="index">
+                <div v-for="(member, index) in team" :key="index">
                     <div class="overflow-hidden">
                         <img class="member-img" :src="member.photo" :alt="member.name" /> 
                     </div>
